@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+html {
+  line-height: 1.15;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+/* body style */
+body {
+  background: linear-gradient(
+    190deg,
+    rgb(202, 225, 243) 0%,
+    rgb(101, 177, 240) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* app page style */
+.App {
+  margin-top: 10rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* app heading style */
+.App h1 {
+  display: inline;
+  color: #e1ebfd;
+  text-shadow: 0 0 5px #f893b1, 3px -1px 5px #faaec5;
+}
+
+/* add todos style */
+.addTodos {
+  display: flex;
+  justify-content: center;
+}
+
+/* todos box style */
+.todo-input {
+  min-width: 15rem;
+  width: 40vw;
+
+  max-height: 2.5rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+
+  align-self: center;
+}
+/* select and style input fields when it gets focus */
+.todo-input:focus {
+  outline: none;
+  border: 2px solid  #faaec5;
+}
+
+/* add button style */
+.add-btn {
+  margin-left: 1rem;
+  background-color:  #faaec5;
+  color: rgb(202, 225, 243);
+  border-radius: 50%;
+  border: 2px solid #e1ebfd;
+  font-size: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px  #faaec5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-btn:focus {
+  outline: none;
+}
+
+/* display todos style */
+.displaytodos {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* display todos list  style */
+.displaytodos ul {
+  list-style: none;
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+
+/* todos item card style */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    #f8c9d7 ,
+    hsla(219, 88%, 94%, 0.9) 
+  );
+
+  margin: 0 1rem 1rem 0;
+  height: 8rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  position: relative;
+}
+
+/* todos textarea card style */
+.card textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #e1ebfd;
+  color: rgb(101, 177, 240);
+  height: 70%;
+}
+.card textarea:disabled {
+  background-color: transparent;
+}
+
+/* todos textarea card button style */
+.card .btns {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.card .btns button {
+  border-radius: 20%;
+  border: none;
+  margin: 0 0.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.card .btns button:focus {
+  outline: none;
+}
+
+/* on screens that are 640px or less, set radius of elemnt's corners to 0/2rem */
+@media Screen and (max-width: 640px) {
+  .displaytodos {
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  .displaytodos ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    align-self: center;
+  }
+  .card {
+    margin-right: 0;
+  }
+}
